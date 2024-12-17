@@ -1,5 +1,13 @@
 # bridge
 Bridge
+# Componente Accesible con StencilJS
+
+Este componente es una lista accesible creada con StencilJS. Permite la navegación entre los elementos de la lista (`listitem`) utilizando las flechas del teclado. Cada elemento de la lista lee todo su contenido interno al enfocarse, sin permitir navegar hacia sus hijos.
+
+## Código del Componente
+
+```tsx
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'my-list',
@@ -54,21 +62,3 @@ export class MyList {
     );
   }
 }
-
-<div role="list">
-  <div role="listitem" tabindex="0">
-    <div>
-      <!-- Contenido dentro del listitem -->
-      <p>Texto descriptivo</p>
-      <button>Botón</button>
-    </div>
-  </div>
-  <div role="listitem" tabindex="0">
-    <div>
-      <!-- Otro contenido -->
-      <p>Otro texto descriptivo</p>
-      <a href="#">Enlace</a>
-    </div>
-  </div>
-</div>
-
